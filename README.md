@@ -162,6 +162,6 @@ SignKey与UserId组成唯一索引，一个SignKey可以分配给多个UserId，
 >* 2. 必须支持动态匹配字段（为啥要装逼？？？），自己写动态匹配代码，golang有开源库的实现[vestigo](https://github.com/husobee/vestigo)
 
 最后简单给出，我们实现方案简单的权限判断流程图：
-![权限判断流程图](http://img.blog.csdn.net/20171020173535174?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQWNjZXB0ZWR4dWthaQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![权限判断流程图](https://github.com/xkeyideal/oreo/blob/master/image.jpeg)
 
 图上的说明应该能看懂，这里仅仅是我们的权限判断流程，需要采用者，可以结合上述思路进行扩展。
