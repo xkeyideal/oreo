@@ -10,7 +10,7 @@ import (
 
 func charCheck(c rune) bool {
 	if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
-		(c >= '0' && c <= '9') || c == '/' || c == ':' || c == '*' || c == '_' {
+		(c >= '0' && c <= '9') || c == '/' || c == ':' || c == '*' || c == '_' || c == '-' {
 		return true
 	}
 	return false
@@ -45,7 +45,7 @@ func routeRuleCheck(fullroute string) error {
 
 	for _, runeChar := range route {
 		if charCheck(runeChar) == false {
-			return errors.New(fmt.Sprintf("route [%s] just support [a-zA-Z0-9/_*:]", fullroute))
+			return errors.New(fmt.Sprintf("route [%s] just support [a-zA-Z0-9-/_*:]", fullroute))
 		}
 	}
 
